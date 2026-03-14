@@ -23,5 +23,6 @@ jobs:
         with:
           name: rngadam # Replace with your actual Cachix cache name
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+          pushFilter: "(-source$|\\.tar\\.gz$|\\.tar\\.xz$|\\.patch$)"
       - name: Build
         run: nix build .#ingress2gateway --print-build-logs

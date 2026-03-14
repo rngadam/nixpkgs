@@ -21,7 +21,7 @@ jobs:
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
       - uses: cachix/cachix-action@v15
         with:
-          name: rngadam-pkgs # Replace with your actual Cachix cache name
+          name: rngadam # Replace with your actual Cachix cache name
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
       - name: Build
         run: nix build .#ingress2gateway --print-build-logs

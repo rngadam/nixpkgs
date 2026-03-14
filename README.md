@@ -6,6 +6,21 @@ My personal [Nix Flake](https://nixos.org) repository. This collection contains 
 
 You can run any package in this repository directly without permanent installation.
 
+### ⚡ Cachix Cache
+
+To speed up installations, you can use my Cachix cache. To configure it:
+
+```bash
+cachix use rngadam
+```
+
+Or, if you aren't using `cachix`, add the following to your `nix.conf` or flake config:
+
+```nix
+extra-substituters = https://rngadam.cachix.org
+extra-trusted-public-keys = rngadam.cachix.org-1:KqFeZFfObicjXMg6E9nf02vjWe+zoSqstGJa9pRX8tc=
+```
+
 ### Run ingress2gateway (v1.0.0-rc1)
 
 ```bash

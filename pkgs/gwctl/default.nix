@@ -11,6 +11,7 @@ buildGoModule rec {
     hash = "sha256-7jv3jfdkX1GNsK3CGqFWUHhHxPByfrlJ19SciqjLnHM=";
   };
 
+  # vendorHash needs to be updated. Setting a placeholder to be replaced.
   vendorHash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
 
   ldflags = [

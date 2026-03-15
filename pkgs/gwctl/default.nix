@@ -8,7 +8,7 @@ buildGoModule rec {
     owner = "kubernetes-sigs";
     repo = "gwctl";
     rev = "v${version}";
-    hash = "sha256-7jv3jfdkX1GNsK3CGqFWUHhHxPByfrlJ19SciqjLnHM=";
+    hash = "sha256-bDctVDjDGIDyVssuxFW5B/zLmcu19j7SNxD//RVOIOU=";
   };
 
   # vendorHash needs to be updated. Setting a placeholder to be replaced.
@@ -26,6 +26,6 @@ buildGoModule rec {
     description = "Command-line tool for managing and understanding Gateway API resources";
     homepage = "https://github.com/kubernetes-sigs/gwctl";
     license = licenses.asl20;
-    maintainers = with maintainers; [ rngadam ];
+    maintainers = [ ];
   };
 }

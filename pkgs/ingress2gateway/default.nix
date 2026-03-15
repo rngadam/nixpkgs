@@ -26,6 +26,6 @@ buildGoModule rec {
     description = "A tool to convert Ingress resources to Gateway API resources";
     homepage = "https://github.com/kubernetes-sigs/ingress2gateway";
     license = licenses.asl20;
-    maintainers = with maintainers; [ rngadam ];
+    maintainers = [ ];
   };
 }

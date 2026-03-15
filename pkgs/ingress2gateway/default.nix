@@ -15,7 +15,8 @@ buildGoModule rec {
   vendorHash = "sha256-GkI58/Nyvah5biqnVWCv3bfhxjN/ErJ9DcNVnHcipfc=";
 
   ldflags = [
-    "-s" "-w"
+    "-s"
+    "-w"
     "-X sigs.k8s.io/ingress2gateway/pkg/version.Version=${version}"
   ];
 

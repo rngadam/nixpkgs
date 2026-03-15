@@ -1,0 +1,13 @@
+bin/
+dist/
+vendor/
+
+.DS_Store
+
+.idea/
+*.iml
+.vscode/
+*.swp
+*.sublime-project
+*.sublime-workspace
+*~

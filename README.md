@@ -1,10 +1,13 @@
 # rngadam/nixpkgs
 
-My personal [Nix Flake](https://nixos.org) repository. This collection contains custom derivations, updated versions of upstream packages, and experimental tools that are not yet available in the official Nixpkgs channels.
+My personal [Nix Flake](https://nixos.org) repository. This collection contains
+custom derivations, updated versions of upstream packages, and experimental
+tools that are not yet available in the official Nixpkgs channels.
 
 ## 🚀 Quick Start
 
-You can run any package in this repository directly without permanent installation.
+You can run any package in this repository directly without permanent
+installation.
 
 ### ⚡ Cachix Cache
 
@@ -14,7 +17,8 @@ To speed up installations, you can use my Cachix cache. To configure it:
 cachix use rngadam
 ```
 
-Or, if you aren't using `cachix`, add the following to your `nix.conf` or flake config:
+Or, if you aren't using `cachix`, add the following to your `nix.conf` or
+flake config:
 
 ```nix
 extra-substituters = https://rngadam.cachix.org
@@ -27,20 +31,29 @@ extra-trusted-public-keys = rngadam.cachix.org-1:KqFeZFfObicjXMg6E9nf02vjWe+zoSq
 nix run github:rngadam/nixpkgs#ingress2gateway
 ```
 
+### Run gwctl (v0.2.0)
+
+```bash
+nix run github:rngadam/nixpkgs#gwctl
+```
+
 🛠️ Included Packages
 
-| Package | Version | Description |
-|---|---|---|
-| ingress2gateway | 1.0.0-rc1 | Updated translation tool for Kubernetes Gateway API. |
+| Package         | Version   | Description                                   |
+|-----------------|-----------|-----------------------------------------------|
+| ingress2gateway | 1.0.0-rc1 | Tool to convert Ingress to Gateway API.       |
+| gwctl           | 0.2.0     | CLI tool for managing Gateway API resources.  |
 
 💻 Supported Systems
-This flake is configured for multi-platform support, ensuring binaries work across:
+This flake is configured for multi-platform support, ensuring binaries
+work across:
 
 * Linux: x86_64-linux, aarch64-linux
 * macOS: x86_64-darwin, aarch64-darwin (Apple Silicon)
 
-📦 Usage as a Flake Input [1] 
-To use these packages in your own Nix configuration, add this repository to your flake.nix:
+📦 Usage as a Flake Input [1]
+To use these packages in your own Nix configuration, add this repository
+to your flake.nix:
 
 ```nix
 {
@@ -60,6 +73,8 @@ nix build .#ingress2gateway
 ```
 
 📜 License
-Unless otherwise specified, the Nix expressions in this repository are licensed under the MIT License. The underlying software being packaged (e.g., ingress2gateway) maintains its original license (Apache 2.0).
+Unless otherwise specified, the Nix expressions in this repository are
+licensed under the MIT License. The underlying software being packaged
+(e.g., ingress2gateway) maintains its original license (Apache 2.0).
 
 [1] [https://github.com](https://github.com/nix-community/nixpkgs-xr)

@@ -10,9 +10,11 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-      in {
+      in
+      {
         packages = {
-          ingress2gateway = pkgs.callPackage ./pkgs/ingress2gateway/default.nix {};
+          ingress2gateway = pkgs.callPackage ./pkgs/ingress2gateway/default.nix { };
+          gwctl = pkgs.callPackage ./pkgs/gwctl/default.nix { };
           default = self.packages.${system}.ingress2gateway;
         };
       }

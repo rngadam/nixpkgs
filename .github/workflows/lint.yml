@@ -1,0 +1,25 @@
+name: Linting
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  markdown:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Markdown Lint
+        run: npx markdownlint-cli .
+
+  nix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: cachix/install-nix-action@v31
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+      - name: Nix Check
+        run: |
+          nix-shell -p nixpkgs-fmt --run "nixpkgs-fmt --check ."
